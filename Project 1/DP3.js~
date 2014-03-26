@@ -1,0 +1,26 @@
+function Jason() {
+    var schooler = {
+        requestInfo: function() {
+            
+            
+            var sName = this.sName();
+            sName.on("complete", function(location) {
+                
+                var lSelect = this.selectL(location);
+                lSelect.on("save", function(location) {
+                    lSelect.save();
+                });
+                
+            });
+        }
+    };
+    
+    schooler.execute("Jason", "Jason");
+    schooler.execute = function(haha)
+    {
+        return schooler[haha];
+    };
+    
+    schooler.execute("jason", "jaifb");
+}
+console.log(Jason);

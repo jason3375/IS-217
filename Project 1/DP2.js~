@@ -1,0 +1,68 @@
+var module = (function() {
+ 
+    var pp = {
+        i:5,
+        get : function() {
+      
+        },
+        set : function( val ) {
+            this.i = val;
+        },
+        sick : function() {
+            
+            var Patient = function(fName, lName)
+            {
+                this.FirstName = fName;
+                this.LastName = lName;
+            };
+            var p1 = new Patient("Jason", "Kornegay");
+            
+            Patient.prototype = 
+                    {
+                        getName: function()
+                {
+                   return this.fName + this.lName;
+                }
+            };
+            console.log(p1);
+            console.log( "Status: sick" );
+        },
+        healthy: function(){
+            
+            var Patient = function(fName, lName)
+            {
+                this.FirstName = fName;
+                this.LastName = lName;
+            };
+            var p1 = new Patient("Mozell", "Kornegay");
+            
+            Patient.prototype = 
+                    {
+                        getName: function()
+                {
+                   return this.fName + this.lName;
+                }
+            };
+            console.log(p1);
+            console.log( "Status: healthy" );
+        }
+    };
+ 
+    return {
+ 
+        facade : function( args ) {
+            pp.set(args.val);
+            pp.get();
+            if ( args.sick ) {
+                pp.sick();
+            }
+            else if (args.healthy)
+            {
+                pp.healthy();
+            }
+        }
+    };
+}());
+
+
+module.facade( {healthy: true, val:10} );
