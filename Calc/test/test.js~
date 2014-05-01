@@ -1,0 +1,29 @@
+var expect = require("chai").expect;
+var math = require("../public/javascripts/math.js");
+
+describe("math", function(){
+	describe("#add()",function() {
+		it("should add two numbers", function() {
+			var result = math.add(4,6);
+			expect(result).to.equal(10);
+		});
+	});
+	describe("#subtract()",function() {
+		it("should subtract two numbers", function() {
+			var result = math.subtract(4,6);
+			expect(result).to.equal(-2);
+		});
+	});
+	describe("#multiply()",function() {
+		it("should multiply two numbers", function() {
+			var result = math.multiply(4,6);
+			expect(result).to.equal(24);
+		});
+	});
+	describe("#divide()",function() {
+		it("should divide two numbers", function() {
+			var result = math.divide(10,2);
+			expect(result).to.equal(5);
+		});
+	});
+});

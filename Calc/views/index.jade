@@ -1,0 +1,26 @@
+extends layout
+block content
+	h1
+		a(href='/') #{title}
+	div(style='float: left;')
+		form(action='/result', method='post')
+			label(for='x') Enter your first number...
+				br
+				input(id='x', type='number', value='', name='x')
+			br
+			select(for='operation') Would you like to...
+				
+				option(value="", disabled="disabled", selected="selected") Select an operation
+				option(name="operation", value="+") Add
+				option(name="operation", value="-") Subtract
+				option(name="operation", value="*") Multiply
+				option(name="operation", value="/") Divide
+						
+			label(for='y') ...now your second number
+				br
+				input(id='y', type='number', value='', name='y')
+			br
+			input(type='submit',value='Equals...', style='font-size:20px; background-color: black; color:orange;')
+	div(style='float: right; margin-right: 600px' , align = 'center')
+		p The answer is
+		p#answer #{answer}
