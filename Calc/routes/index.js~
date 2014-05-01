@@ -6,7 +6,7 @@ var math = require("../public/javascripts/math.js");
 
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Welcome to my Calculator!' });
+  res.render('index', { title: 'Welcome to my Calculator' });
 };
 
 exports.result = function(req, res){
