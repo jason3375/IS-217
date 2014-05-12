@@ -1,0 +1,1 @@
+alert("Address: 2720 S Elmwood Pl" + "\n" + "Type: Medic Response- 7 per Rule" + "\n" + "Date: 04/15/2014" + "\n" + "Latitude: 47.592622" + "\n" + "Longitude: -122.297133" + "\n" + "Incident Number: F140037660");

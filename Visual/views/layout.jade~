@@ -1,0 +1,9 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+iframe(width='1800', height='600', frameborder='0', allowfullscreen='allowfullscreen', src='http://www.mapsdata.co.uk/mapsdataapp/index.php/site/htmlembed/00284458ff964dc74e28680d3be8f697?marker=mapsdata_m4&zoom=12&center=47.601476,-122.322121&display=clustermap&md5=00284458ff964dc74e28680d3be8f697&viewcolumn=&viewcolor=000000&viewradius=5&')
+
+    block content
