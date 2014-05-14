@@ -7,7 +7,7 @@ function Computer ()
 {
     this.cost = function () { return 1000; };
     this.screensize = function () { return 11; };
-    this.harddrivesize = function() { return 128; };
+    this.hardsize = function() { return 128; };
     this.memsize = function () { return 8; };
 }
 
