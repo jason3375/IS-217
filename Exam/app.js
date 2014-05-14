@@ -17,7 +17,8 @@ var Schema = new mongoose.Schema({
     
     screen: String,
     drive: String,
-    memory: String
+    memory: String,
+    quoted: String
 });
 
 
@@ -57,11 +58,13 @@ app.get('/', function(req, res){
 
 var quote = mongoose.model('Quote', Schema);
 
+
 app.post('/new', function(req, res){
 	new quote({
 		screen    : req.body.screen,
 		drive: req.body.drive,
-		memory   : req.body.memory				
+		memory   : req.body.memory,
+                quoted: req.body.quoted
 	}).save(function(err, doc){
 		if(err) res.json(err);
 		else    res.redirect('/');

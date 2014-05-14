@@ -13,30 +13,31 @@ p#imgp
     #config
       #options
         form(action='/new', method='post' , enctype="multipart/form-data")
+          p#test 1000
           | Please select your Screen Size
           p
             img.thumb(src='./img/screen.png', alt='screen')
-            input(type='radio', name='screen', value='11 inches')
+            input#screen11(type='radio', name='screen', value='11 inches', checked)
             | 11 inches - Included
             br
-            input(type='radio', name='screen', value='15 inches')
+            input#screen15(type='radio', name='screen', value='15 inches')
             | 15 inches + $200
           br
           | Please select your Hard Drive Size
           p
             img.thumb(src='./img/harddrive.png', alt='screen')
-            input(type='radio', name='drive', value='128GB')
+            input#hd128(type='radio', name='drive', value='128GB', checked)
             | 128GB - Included
             br
-            input(type='radio', name='drive', value='256GB')
+            input#hd256(type='radio', name='drive', value='256GB')
             | 256GB + $200
           | Please select your Memory Size
           p
             img.thumb(src='./img/RAM.png', alt='screen')
-            input(type='radio', name='memory', value='8GB')
+            input#ms8(type='radio', name='memory', value='8GB', checked)
             | 8GB - Included
             br
-            input(type='radio', name='memory', value='16GB')
+            input#ms16(type='radio', name='memory', value='16GB')
             | 16GB + $200
           p#save
             input(type='submit', value='Save quote', style='width: 100px; height: 25px; font-size: 14px;')
@@ -44,7 +45,7 @@ p#imgp
       #quote
         h4(align='center', style='margin-top: 0px;')
           | Current Price is:
-        h3#price(align='center')
+        p#price(type='text', align='center', name='quoted')
           | $1000
         h4(align='center', style='margin-bottom: 0px;') Current Configuration
         br
