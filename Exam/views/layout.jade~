@@ -1,0 +1,61 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/FinalCSS.css')
+    script(src='//code.jquery.com/jquery-1.10.2.js')
+    script(src='/scripts/visual.js')
+    
+  body
+p#imgp
+      img#laptop(src='./img/laptop.png', alt='Laptop Screen')
+    p#welcome Welcome to your laptop configuration page!
+    #config
+      #options
+        form(action='', method='POST')
+          | Please select your Screen Size
+          p
+            img.thumb(src='./img/screen.png', alt='screen')
+            input(type='radio', name='screen', value='SStandard')
+            | 11 inches - Included
+            br
+            input(type='radio', name='screen', value='SUpgrade')
+            | 15 inches + $200
+          br
+          | Please select your Hard Drive Size
+          p
+            img.thumb(src='./img/harddrive.png', alt='screen')
+            input(type='radio', name='drive', value='HStandard')
+            | 128GB - Included
+            br
+            input(type='radio', name='drive', value='HUpgrade')
+            | 256GB + $200
+          | Please select your Memory Size
+          p
+            img.thumb(src='./img/RAM.png', alt='screen')
+            input(type='radio', name='memory', value='MStandard')
+            | 8GB - Included
+            br
+            input(type='radio', name='memory', value='MUpgrade')
+            | 16GB + $200
+          p#save
+            input(type='submit', value='Save quote', style='width: 100px; height: 25px; font-size: 14px;')
+      #quote
+        h4(align='center', style='margin-top: 0px;')
+          | Current Price is:
+        h3#price(align='center')
+          | $1000
+        h4(align='center', style='margin-bottom: 0px;') Current Configuration
+        br
+        | Screen size:
+        p#screensize(align='center', style='margin-top: 10px; margin-bottom: 0px;')
+          | 11 inches
+        br
+        | Hard Drive size:
+        p#hardsize(align='center', style='margin-top: 10px; margin-bottom: 0px;')
+          | 128GB
+        br
+        | Memory size:
+        p#memsize(align='center', style='margin-top: 5px; margin-bottom: 0px;')
+          | 8GB
+

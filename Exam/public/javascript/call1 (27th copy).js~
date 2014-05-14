@@ -1,0 +1,2 @@
+alert("Address: 2818 NE 145th St" + "\n" + "Type: Mutual Aid-Engine" + "\n" + "Date: 04/15/2014" + 
+        "\n" + "Latitude: 47.733796" + "\n" + "Longitude: -122.297753" + "\n" + "Incident Number: B140037610");
