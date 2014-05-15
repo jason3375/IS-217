@@ -1,11 +1,10 @@
 $(document).ready(function() {
-    globalVar = 1000;
      $("#screen15").click(function () {
        var content = "15 inches";
-       //var price = 1000;
+       var price = 1000;
        var dollar = "$";
        $("#screensize").text(content);
-       $("#test").text(dollar + (globalVar + 200));
+       $("#price").text(dollar + (price + 200));
     }),
 
   
